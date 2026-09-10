@@ -133,7 +133,15 @@ def m1():
 # ------------------------------------------------------- m2: towers Ken Burns
 def m2():
     towers = Image.open(M("t05-Webardos-1.jpg")).convert("RGB")
-    opens = [kenburns(towers, 1.6), kenburns(towers, 2.1), kenburns(towers, 2.7)]
+    # eased push-in: wide on the full meme -> tight on the face on the tower
+    s0, s1 = 1.0, 1.85
+    c0, c1 = (0.50, 0.50), (0.54, 0.615)
+    opens = []
+    for t in (0.0, 0.33, 0.67, 1.0):
+        e = t * t * (3 - 2 * t)
+        opens.append(kenburns(towers, s0 + (s1 - s0) * e,
+                              c0[0] + (c1[0] - c0[0]) * e,
+                              c0[1] + (c1[1] - c0[1]) * e))
     g1 = grid4([mc("t01-quassssssss-1.jpg"), mc("t03-Ivyr1ver-1.jpg"),
                 mc("t06-Itskirkslop-1.jpg"), mc("t02-kayrem333-1.jpg")])
     g2 = grid4([mc("t01-quassssssss-2.jpg"), mc("t01-quassssssss-3.jpg"),
@@ -145,7 +153,7 @@ def m2():
                credit_frame(MEME_CREDITS[4:] + CT_CREDITS[:2]),
                close_frame()])
     save_mgif(frames, "icon-m2-towers-zoom.gif",
-              [780, 780, 830] + [400] * 3 + [580, 580, 1300])
+              [650, 600, 600, 1000] + [380] * 3 + [550, 550, 1250])
 
 
 # ------------------------------------------------------- m3: typewriter open
