@@ -267,8 +267,10 @@ def m2v3():
     g3 = grid4([mc("t04-B1TuckerCarlson-1.jpg"), mc("t12-Itskirkslop-insane-1.jpg"),
                 mc("t11-Itskirkslop-bigk-1.jpg"), mc("t08-Erikabot1939-f1.jpg")])
     frames = (opens + [g1, g2, g3] +
-              [credit_frame(MEME_CREDITS[:4]),
-               credit_frame(MEME_CREDITS[4:] + CT_CREDITS[:2]),
+              [credit_frame(MEME_CREDITS[:6]),
+               credit_frame(MEME_CREDITS[6:] + ["@elonmusk", "@WatcherGuru",
+                                                "@blknoiz06", "@BlackBullSol",
+                                                "@whoisg0mji"]),
                close_frame()])
     save_mgif(frames, "icon-m2-v3-bibi.gif",
               [600, 550, 650, 1050] + [380] * 3 + [550, 550, 1250])
