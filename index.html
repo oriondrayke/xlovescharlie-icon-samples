@@ -18,6 +18,13 @@
   h1 { font-size: 34px; letter-spacing: 6px; font-weight: normal; color: #f3ead2; }
   .sub { margin-top: 14px; color: #8b87a0; font-size: 15px; font-style: italic; }
   .rule { width: 120px; height: 1px; background: linear-gradient(90deg, transparent, #d4a94e, transparent); margin: 26px auto 0; }
+  .memelink {
+    display: block; max-width: 460px; margin: 0 auto 48px; text-align: center;
+    padding: 14px 20px; border: 1px solid #d4a94e; border-radius: 10px;
+    color: #d4a94e; text-decoration: none; font-size: 16px; letter-spacing: 2px;
+    background: rgba(212, 169, 78, 0.06); transition: background .25s, color .25s;
+  }
+  .memelink:hover { background: rgba(212, 169, 78, 0.16); color: #f3ead2; }
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -48,6 +55,7 @@
   <div class="sub">X remembers — icon samples for the September 11 tribute launch</div>
   <div class="rule"></div>
 </header>
+<a class="memelink" href="memes.html">Sir's meme-movie version →</a>
 <div class="grid">
   <div class="card">
     <img src="icon-v1-candle-vigil.gif" alt="Candle Vigil">
