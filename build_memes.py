@@ -86,6 +86,25 @@ def close_frame(big="we love u", small="X remembers"):
     return im
 
 
+def credit_frame_v5(handles, honor=None, title="made with love by"):
+    """7-line credit frame; the honor handle gets a slightly larger line."""
+    im = Image.new("RGB", (SIZE, SIZE), (8, 10, 22))
+    d = ImageDraw.Draw(im)
+    ft = font(FR, 19)
+    bb = d.textbbox((0, 0), title, font=ft)
+    d.text(((SIZE - bb[2]) / 2, 64), title, font=ft, fill=(150, 158, 180))
+    y = 116
+    for h in handles:
+        big = h == honor
+        fh = font(FB, 30 if big else 25)
+        txt = f"{h} loves u"
+        bb = d.textbbox((0, 0), txt, font=fh)
+        d.text(((SIZE - bb[2]) / 2, y), txt, font=fh,
+               fill=(245, 205, 110) if big else GOLD)
+        y += 48 if big else 42
+    return im
+
+
 def grid4(imgs):
     canvas = Image.new("RGB", (SIZE, SIZE), (5, 6, 14))
     cells = [im.resize((236, 236), Image.LANCZOS) for im in imgs]
@@ -267,10 +286,11 @@ def m2v3():
     g3 = grid4([mc("t04-B1TuckerCarlson-1.jpg"), mc("t12-Itskirkslop-insane-1.jpg"),
                 mc("t11-Itskirkslop-bigk-1.jpg"), mc("t08-Erikabot1939-f1.jpg")])
     frames = (opens + [g1, g2, g3] +
-              [credit_frame(MEME_CREDITS[:6]),
-               credit_frame(MEME_CREDITS[6:] + ["@elonmusk", "@WatcherGuru",
-                                                "@blknoiz06", "@BlackBullSol",
-                                                "@whoisg0mji"]),
+              [credit_frame_v5(["@charliekirk11"] + MEME_CREDITS[:6],
+                               honor="@charliekirk11"),
+               credit_frame_v5(MEME_CREDITS[6:] + ["@elonmusk", "@WatcherGuru",
+                                                   "@blknoiz06", "@BlackBullSol",
+                                                   "@whoisg0mji", "@grok"]),
                close_frame()])
     save_mgif(frames, "icon-m2-v3-bibi.gif",
               [600, 550, 650, 1050] + [380] * 3 + [550, 550, 1250])
