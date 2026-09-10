@@ -3,157 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>XLOVESCHARLIE — icon samples</title>
+<title>XLOVESCHARLIE — Icon Samples</title>
 <style>
-  :root {
-    --bg: #06080f;
-    --bg-card: #0d1220;
-    --edge: #1e2740;
-    --gold: #e8b34b;
-    --gold-dim: #a5803a;
-    --text: #e6e9f2;
-    --muted: #8b93ab;
-  }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    background: radial-gradient(ellipse 80% 50% at 50% -10%, #101a33 0%, var(--bg) 60%);
-    color: var(--text);
+    background: #06070f;
+    color: #e8e4d8;
     font-family: Georgia, 'Times New Roman', serif;
     min-height: 100vh;
     padding: 48px 20px 80px;
   }
-  header { text-align: center; max-width: 760px; margin: 0 auto 56px; }
-  .flame { font-size: 34px; }
-  h1 {
-    font-size: clamp(26px, 5vw, 40px);
-    letter-spacing: 0.14em;
-    margin: 14px 0 10px;
-    color: var(--gold);
-    text-shadow: 0 0 24px rgba(232, 179, 75, 0.35);
-    font-weight: 600;
-  }
-  .subtitle { color: var(--muted); font-size: 16px; line-height: 1.55; font-style: italic; }
-  .rule {
-    width: 120px; height: 1px; margin: 26px auto 0;
-    background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
-  }
+  header { text-align: center; margin-bottom: 56px; }
+  .flame { font-size: 28px; letter-spacing: 12px; color: #d4a94e; margin-bottom: 18px; }
+  h1 { font-size: 34px; letter-spacing: 6px; font-weight: normal; color: #f3ead2; }
+  .sub { margin-top: 14px; color: #8b87a0; font-size: 15px; font-style: italic; }
+  .rule { width: 120px; height: 1px; background: linear-gradient(90deg, transparent, #d4a94e, transparent); margin: 26px auto 0; }
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 28px;
-    max-width: 1080px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 36px;
+    max-width: 1180px;
     margin: 0 auto;
   }
   .card {
-    background: var(--bg-card);
-    border: 1px solid var(--edge);
-    border-radius: 12px;
+    background: #0c0e1d;
+    border: 1px solid #1d2038;
+    border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: border-color .25s, transform .25s;
   }
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(232, 179, 75, 0.25);
-  }
-  .card img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    background: #000;
-  }
-  .meta { padding: 18px 20px 20px; }
-  .meta h2 {
-    font-size: 19px;
-    letter-spacing: 0.06em;
-    color: var(--gold);
-    margin-bottom: 8px;
-    font-weight: 600;
-  }
-  .meta p { color: var(--muted); font-size: 14.5px; line-height: 1.5; margin-bottom: 12px; }
-  .stats {
-    font-family: 'Courier New', monospace;
-    font-size: 12.5px;
-    color: var(--gold-dim);
-    border-top: 1px solid var(--edge);
-    padding-top: 10px;
-    letter-spacing: 0.04em;
-  }
-  footer {
-    text-align: center;
-    margin-top: 64px;
-    color: var(--muted);
-    font-size: 13.5px;
-    font-style: italic;
-    line-height: 1.7;
-  }
-  footer a { color: var(--gold-dim); text-decoration: none; }
-  footer a:hover { color: var(--gold); }
+  .card:hover { border-color: #d4a94e; transform: translateY(-4px); }
+  .card img { width: 100%; display: block; aspect-ratio: 1; background: #000; }
+  .meta { padding: 18px 20px 22px; }
+  .meta h2 { font-size: 18px; letter-spacing: 2px; color: #d4a94e; font-weight: normal; margin-bottom: 8px; }
+  .meta p { font-size: 14px; line-height: 1.55; color: #a9a5ba; }
+  .specs { margin-top: 10px; font-size: 12px; color: #615e78; letter-spacing: 1px; }
+  footer { text-align: center; margin-top: 64px; color: #615e78; font-size: 13px; font-style: italic; }
 </style>
 </head>
 <body>
-
 <header>
   <div class="flame">🕯️</div>
-  <h1>XLOVESCHARLIE<br>icon samples</h1>
-  <p class="subtitle">Review samples for the September 11 tribute launch — "X remembers".<br>
-  Memorial imagery only: portraits, candlelight, Tribute in Light, the Manhattan skyline.</p>
+  <h1>XLOVESCHARLIE</h1>
+  <div class="sub">X remembers — icon samples for the September 11 tribute launch</div>
   <div class="rule"></div>
 </header>
-
-<main class="grid">
-
+<div class="grid">
   <div class="card">
-    <img src="icon-v1-candle-vigil.gif" alt="Candle Vigil — animated icon sample" loading="lazy">
+    <img src="icon-v1-candle-vigil.gif" alt="Candle Vigil">
     <div class="meta">
       <h2>1 · Candle Vigil</h2>
-      <p>Kirk portrait with a flickering foreground candle, into Tribute-in-Light beams, an Elon frame, and "X remembers".</p>
-      <div class="stats">5 frames · 559 KB · 480×480 · loops</div>
+      <p>Charlie's portrait with a candle flickering in front, then the twin beams, Elon, and the closing words.</p>
+      <div class="specs">5 frames · 559 KB</div>
     </div>
   </div>
-
   <div class="card">
-    <img src="icon-v2-twin-beams.gif" alt="Twin Beams — animated icon sample" loading="lazy">
+    <img src="icon-v2-twin-beams.gif" alt="Twin Beams">
     <div class="meta">
       <h2>2 · Twin Beams</h2>
-      <p>Constant twin light-beam backdrop while the foreground crossfades: Kirk → candle → Elon → "X remembers".</p>
-      <div class="stats">7 frames · 679 KB · 480×480 · loops</div>
+      <p>The beams never leave the frame while the portraits crossfade: Charlie, candle, Elon, then the words.</p>
+      <div class="specs">7 frames · 679 KB</div>
     </div>
   </div>
-
   <div class="card">
-    <img src="icon-v3-skyline-memorial.gif" alt="Skyline Memorial — animated icon sample" loading="lazy">
+    <img src="icon-v3-skyline-memorial.gif" alt="Skyline Memorial">
     <div class="meta">
       <h2>3 · Skyline Memorial</h2>
-      <p>Lower Manhattan at dusk; the tribute beams slowly brighten, Kirk's portrait fades in over the skyline.</p>
-      <div class="stats">6 frames · 622 KB · 480×480 · loops</div>
+      <p>Manhattan at dusk, the tribute beams brighten, and Charlie fades in like a memory over the city.</p>
+      <div class="specs">6 frames · 622 KB</div>
     </div>
   </div>
-
   <div class="card">
-    <img src="icon-v4-triptych.gif" alt="Triptych — animated icon sample" loading="lazy">
+    <img src="icon-v4-triptych.gif" alt="Triptych">
     <div class="meta">
       <h2>4 · Triptych</h2>
-      <p>Three panels — Kirk, beams with candle, Elon — assemble piece by piece, hold with a brighter glow, then the text frame.</p>
-      <div class="stats">6 frames · 463 KB · 480×480 · loops</div>
+      <p>Three panels — Charlie, the beams with candle, Elon — assembling into one memorial tryptich, then the words.</p>
+      <div class="specs">6 frames · 463 KB</div>
     </div>
   </div>
-
   <div class="card">
-    <img src="icon-v5-minimal-heart.gif" alt="Minimal Heart — animated icon sample" loading="lazy">
+    <img src="icon-v5-minimal-heart.gif" alt="Minimal Heart">
     <div class="meta">
       <h2>5 · Minimal Heart</h2>
-      <p>The quietest option: Kirk portrait, subtle X motif, a small heart of light, gentle candle flicker, one brief beams flash.</p>
-      <div class="stats">5 frames · 674 KB · 480×480 · loops</div>
+      <p>Nearly still: Charlie, a soft X, a small heart, one candle — with a single quiet flash of the beams.</p>
+      <div class="specs">5 frames · 674 KB</div>
     </div>
   </div>
-
-</main>
-
-<footer>
-  <p>Each GIF's first frame is its strongest still, so it works as a static list-view icon.<br>
-  Source photography: Wikimedia Commons (CC BY-SA / public domain). Watermarked review samples.<br>
-  <a href="https://github.com/oriondrayke/xlovescharlie-icon-samples">github.com/oriondrayke/xlovescharlie-icon-samples</a></p>
-</footer>
-
+</div>
+<footer>for the towers · for charlie · X remembers</footer>
 </body>
 </html>
