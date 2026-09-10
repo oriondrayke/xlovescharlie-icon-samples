@@ -248,6 +248,32 @@ def m5():
               [850, 850] + [330] * 5 + [600, 600, 1500])
 
 
+# ------------------------------------------- m2 v3: bibi-on-forehead edition
+def m2v3():
+    towers = Image.open(M("t05-webardos-bibi-edit.jpg")).convert("RGB")
+    # eased push-in: wide full meme -> tight on Netanyahu's face on the forehead
+    s0, s1 = 1.0, 3.4
+    c0, c1 = (0.50, 0.50), (0.491, 0.40)
+    opens = []
+    for t in (0.0, 0.4, 0.75, 1.0):
+        e = t * t * (3 - 2 * t)
+        opens.append(kenburns(towers, s0 + (s1 - s0) * e,
+                              c0[0] + (c1[0] - c0[0]) * e,
+                              c0[1] + (c1[1] - c0[1]) * e))
+    g1 = grid4([mc("t01-quassssssss-1.jpg"), mc("t03-Ivyr1ver-1.jpg"),
+                mc("t06-Itskirkslop-1.jpg"), mc("t02-kayrem333-1.jpg")])
+    g2 = grid4([mc("t01-quassssssss-2.jpg"), mc("t01-quassssssss-3.jpg"),
+                mc("t01-quassssssss-4.jpg"), mc("t07-B1TuckerCarlson-1.jpg")])
+    g3 = grid4([mc("t04-B1TuckerCarlson-1.jpg"), mc("t12-Itskirkslop-insane-1.jpg"),
+                mc("t11-Itskirkslop-bigk-1.jpg"), mc("t08-Erikabot1939-f1.jpg")])
+    frames = (opens + [g1, g2, g3] +
+              [credit_frame(MEME_CREDITS[:4]),
+               credit_frame(MEME_CREDITS[4:] + CT_CREDITS[:2]),
+               close_frame()])
+    save_mgif(frames, "icon-m2-v3-bibi.gif",
+              [600, 550, 650, 1050] + [380] * 3 + [550, 550, 1250])
+
+
 if __name__ == "__main__":
     m1(); m2(); m3(); m4(); m5()
     print("done")
